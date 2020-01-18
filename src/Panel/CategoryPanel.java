@@ -1,6 +1,7 @@
-package Gui.Panel;
+package Panel;
 
 import java.awt.BorderLayout;
+
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
@@ -9,8 +10,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import Entity.Category;
-import Gui.Listener.CategoryListener;
-import Gui.Model.CategoryTableModel;
+import Listener.CategoryListener;
+import Model.CategoryTableModel;
 import Service.CategoryService;
 import Util.ColorUtil;
 import Util.GUIUtil;

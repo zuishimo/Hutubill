@@ -6,12 +6,12 @@ import java.sql.SQLException;
 
 public class DBUtil {
 	
-	private static String ip = "127.0.0.1";
-	private static int port = 3306;
-	private static String database = "hutubill";
-	private static String encoding = "UTF-8";
-	private static String loginName = "root";
-	private static String password = "jatqq447xxwwkk";
+	public static String ip = "127.0.0.1";
+	public  static int port = 3306;
+	public static String database = "hutubill";
+	public static String encoding = "UTF-8";
+	public static String loginName = "root";
+	public static String password = "jatqq447xxwwkk";
 	
 	static {
 		try {

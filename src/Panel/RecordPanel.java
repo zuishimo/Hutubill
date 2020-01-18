@@ -1,6 +1,7 @@
-package Gui.Panel;
+package Panel;
 
 import java.awt.BorderLayout;
+
 import java.awt.GridLayout;
 import java.util.Date;
 
@@ -13,8 +14,8 @@ import javax.swing.JTextField;
 import org.jdesktop.swingx.JXDatePicker;
 
 import Entity.Category;
-import Gui.Listener.RecordListener;
-import Gui.Model.CategoryComboBoxModel;
+import Listener.RecordListener;
+import Model.CategoryComboBoxModel;
 import Service.CategoryService;
 import Util.ColorUtil;
 import Util.GUIUtil;

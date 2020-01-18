@@ -8,7 +8,7 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import Gui.Panel.WorkingPanel;
+import Panel.WorkingPanel;
 
 public class CenterPanel extends JPanel {
 

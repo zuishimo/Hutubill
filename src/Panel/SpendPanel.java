@@ -1,6 +1,7 @@
-package Gui.Panel;
+package Panel;
 
 import java.awt.BorderLayout;
+
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -8,12 +9,14 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Page.SpendPage;
+import Service.SpendService;
 import Util.CircleProgressBar;
 import Util.ColorUtil;
 import Util.FontUtil;
 import Util.GUIUtil;
 
-public class SpendPanel extends JPanel {
+public class SpendPanel extends WorkingPanel {
 
 	//创建单例面板，声明一个静态属性，指向面板实例
 	public static SpendPanel instance = new SpendPanel();
@@ -25,12 +28,12 @@ public class SpendPanel extends JPanel {
 	public JLabel lDayAvgAvailable = new JLabel("日均可用");
 	public JLabel lMonthLeftDay = new JLabel("距离月末");
 	
-	public JLabel vMonthSpend = new JLabel("￥2300");
-    public JLabel vTodaySpend = new JLabel("￥25");
-    public JLabel vAvgSpendPerDay = new JLabel("￥120");
-    public JLabel vMonthAvailable = new JLabel("￥2084");
-    public JLabel vDayAvgAvailable = new JLabel("￥389");
-    public JLabel vMonthLeftDay = new JLabel("15天");
+	public JLabel vMonthSpend = new JLabel("￥0");
+    public JLabel vTodaySpend = new JLabel("￥0");
+    public JLabel vAvgSpendPerDay = new JLabel("￥0");
+    public JLabel vMonthAvailable = new JLabel();
+    public JLabel vDayAvgAvailable = new JLabel();
+    public JLabel vMonthLeftDay = new JLabel();
 	
 	CircleProgressBar bar;
 	
@@ -88,6 +91,40 @@ public class SpendPanel extends JPanel {
 	
 	private Component center2() {
 		return bar; 
+	}
+
+	@Override
+	public void updateData() {
+		// TODO Auto-generated method stub
+		SpendPage spend = new SpendService().getSpendPage();
+		vMonthSpend.setText(spend.monthSpend);
+		vTodaySpend.setText(spend.todaySpend);
+        vAvgSpendPerDay.setText(spend.avgSpendPerDay);
+        vMonthAvailable.setText(spend.monthAvailable);
+        vDayAvgAvailable.setText(spend.dayAvgAvailable);
+        vMonthLeftDay.setText(spend.monthLeftDay);
+		
+        bar.setProgress(spend.usagePercentage);
+        if(spend.isOverSpend) {
+        	vMonthAvailable.setForeground(ColorUtil.warningColor);
+        	vMonthSpend.setForeground(ColorUtil.warningColor);
+        	vTodaySpend.setForeground(ColorUtil.warningColor);
+        	
+        }
+        else {
+        	vMonthAvailable.setForeground(ColorUtil.grayColor);
+        	vMonthSpend.setForeground(ColorUtil.blueColor);
+        	vTodaySpend.setForeground(ColorUtil.blueColor);
+        	
+        }
+        bar.setForegroundColor(ColorUtil.getByPercentage(spend.usagePercentage));
+        addListener();
+	}
+
+	@Override
+	public void addListener() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

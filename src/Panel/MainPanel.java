@@ -1,6 +1,7 @@
-package Gui.Panel;
+package Panel;
 
 import java.awt.BorderLayout;
+
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JToolBar;
 
-import Gui.Listener.ToolBarListener;
+import Listener.ToolBarListener;
 import Util.CenterPanel;
 import Util.GUIUtil;
 

@@ -2,10 +2,9 @@ package StartUp;
 
 import javax.swing.SwingUtilities;
 
-
-import Gui.Frame.MainFrame;
-import Gui.Panel.MainPanel;
-import Gui.Panel.SpendPanel;
+import Frame.MainFrame;
+import Panel.MainPanel;
+import Panel.SpendPanel;
 import Util.GUIUtil;
 
 public class BootStarp {

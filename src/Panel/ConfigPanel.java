@@ -1,6 +1,7 @@
-package Gui.Panel;
+package Panel;
 
 import java.awt.BorderLayout;
+
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -8,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import Gui.Listener.ConfigListener;
+import Listener.ConfigListener;
 import Service.ConfigService;
 import Util.ColorUtil;
 import Util.GUIUtil;
@@ -18,7 +19,7 @@ public class ConfigPanel extends WorkingPanel {
 	public static ConfigPanel instance = new ConfigPanel();
 	
 	public JLabel lMonthBudget = new JLabel("本月预算");
-	public JTextField tfBudget = new JTextField();
+	public JTextField tfBudget = new JTextField("0");
 	public JLabel lMySqlAdress = new JLabel("MySql安装目录");
 	public JTextField tfMysqlPath = new JTextField();
 	public JButton bUpdate = new JButton("更新");

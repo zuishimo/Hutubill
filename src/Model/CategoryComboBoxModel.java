@@ -1,6 +1,7 @@
-package Gui.Model;
+package Model;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.swing.ComboBoxModel;

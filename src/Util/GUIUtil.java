@@ -50,8 +50,11 @@ public class GUIUtil {
 		//如果是数字，进行是否为负数判断
 		if(checkNumber(tf, input)) {
 			int num = Integer.parseInt(tf.getText());
-			if(num<0) 
+			if(num<0) {
+				JOptionPane.showMessageDialog(null, input + "不能为负数");
+				tf.grabFocus();
 				return true;
+			}
 			else
 				return false;
 		}
@@ -70,7 +73,10 @@ public class GUIUtil {
 			JOptionPane.showMessageDialog(null, input + " 不能为零");
 			tf.grabFocus();
 			return true;
-		}		
+		}
+		if(checkNagative(tf, input)) {
+			return true;
+		}
 		return false;
 	}
 	

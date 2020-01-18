@@ -5,7 +5,7 @@ import java.util.Date;
 import DAO.RecordDAO;
 import Entity.Category;
 import Entity.Record;
-import Gui.Panel.RecordPanel;
+import Panel.RecordPanel;
 
 public class RecordService {
 	

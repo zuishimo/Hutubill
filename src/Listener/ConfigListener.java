@@ -1,12 +1,13 @@
-package Gui.Listener;
+package Listener;
 
 import java.awt.event.ActionEvent;
+
 import java.awt.event.ActionListener;
 import java.io.File;
 
 import javax.swing.JOptionPane;
 
-import Gui.Panel.ConfigPanel;
+import Panel.ConfigPanel;
 import Service.ConfigService;
 import Util.GUIUtil;
 
@@ -16,7 +17,7 @@ public class ConfigListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		ConfigPanel p = ConfigPanel.instance;
-		if(!GUIUtil.checkNumber(p.tfBudget, "本月预算")) {
+		if(GUIUtil.checkNagative(p.tfBudget, "本月预算")) {
 			return;
 		}
 		String mysqlPath = p.tfMysqlPath.getText();

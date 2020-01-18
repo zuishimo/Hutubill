@@ -1,4 +1,4 @@
-package Gui.Listener;
+package Listener;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,10 +7,10 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 import Entity.Category;
-import Gui.Panel.CategoryPanel;
-import Gui.Panel.MainPanel;
-import Gui.Panel.RecordPanel;
-import Gui.Panel.SpendPanel;
+import Panel.CategoryPanel;
+import Panel.MainPanel;
+import Panel.RecordPanel;
+import Panel.SpendPanel;
 import Service.RecordService;
 import Util.GUIUtil;
 

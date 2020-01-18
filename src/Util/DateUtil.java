@@ -2,6 +2,7 @@ package Util;
 
 import java.util.Calendar;
 
+
 import java.util.Date;
 
 public class DateUtil {
@@ -68,11 +69,4 @@ public class DateUtil {
 	     return (int) ((lastDayMilliSeconds-toDayMilliSeconds)/millisecondsOfOneDay);
 	}
 	
-	public static void main(String[] args) {
-		System.out.println(DateUtil.today());
-		System.out.println(DateUtil.monthBegin());
-		System.out.println(DateUtil.monthEnd());
-		System.out.println(DateUtil.thisMonthTotalDay());
-		System.out.println(DateUtil.thisMonthLeftDay());
-	}
 }

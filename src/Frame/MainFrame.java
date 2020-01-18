@@ -1,8 +1,8 @@
-package Gui.Frame;
+package Frame;
 
 import javax.swing.JFrame;
 
-import Gui.Panel.MainPanel;
+import Panel.MainPanel;
 
 public class MainFrame extends JFrame {
 
